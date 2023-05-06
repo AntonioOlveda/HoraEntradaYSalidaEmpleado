@@ -1,8 +1,65 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABCEmpleado.aspx.cs" Inherits="HoraEntradaYSalidaEmpleado.ABC" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site1.Master" CodeBehind="ABCEmpleado.aspx.cs" Inherits="HoraEntradaYSalidaEmpleado.ABC" %>
 
-<!DOCTYPE html>
+<asp:Content runat="server" ContentPlaceHolderID="head"></asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<asp:Content runat="server" ContentPlaceHolderID="titulo">
+	<h3>Empleado</h3>
+	<p>Altas, bajas y cambios de empleados</p>
+</asp:Content>
+<asp:Content runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
+    <form id="form1" runat="server">
+		<!-- Row starts -->
+		<div class="row gutter">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="panel-body">
+					<div class="styled-input-wrapper">
+						<div class="input-icon">
+							<i class="icon-user"></i>
+						</div>
+						<div class="styled-input">
+							<div class="form-group">
+								<label for="userName">Enter Your Name</label>
+								<input type="text" class="form-control" id="userName" placeholder="User Name">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="panel-body">
+					<div class="styled-input-wrapper">
+						<div class="input-icon">
+							<i class="icon-user-check text-success"></i>
+						</div>
+						<div class="styled-input">
+							<div class="form-group has-success">
+								<label for="userNameCompleted" class="control-label">Success Input</label>
+								<input type="text" class="form-control" id="userNameCompleted" placeholder="User Name" value="User Name entered">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="panel-body">
+						<div class="styled-input-wrapper">
+							<div class="input-icon">
+								<i class="icon-remove-user text-danger"></i>
+							</div>
+							<div class="styled-input">
+								<div class="form-group has-error">
+									<label for="userNameError" class="control-label">Error Input</label>
+									<input type="text" class="form-control" id="userNameError" placeholder="User Name" value="Invalid Username">
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- Row ends -->
+    </form>
+</asp:Content>
+<%--<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -40,7 +97,8 @@
             &nbsp;</p>
         
         <asp:GridView ID="GridView1" runat="server" Width="529px">
+            <HeaderStyle
         </asp:GridView>
     </form>
 </body>
-</html>
+</html>--%>

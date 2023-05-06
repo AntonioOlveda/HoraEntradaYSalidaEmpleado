@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reporte.aspx.cs" Inherits="HoraEntradaYSalidaEmpleado.Reporte" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site1.Master" CodeBehind="Reporte.aspx.cs" Inherits="HoraEntradaYSalidaEmpleado.Reporte" %>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -8,6 +8,14 @@
     <title></title>
 </head>
 <body>
+    <form id="form1" runat="server">
+        
+    </form>
+</body>
+</html>--%>
+<asp:Content runat="server" ContentPlaceHolderID="head"></asp:Content>
+
+<asp:Content runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <form id="form1" runat="server">
         <div>
             <h1>Generar reporte fechas y horas de salida de empleado</h1>
@@ -20,5 +28,5 @@
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
     </form>
-</body>
-</html>
+   
+</asp:Content>
